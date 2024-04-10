@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Romântica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="question">
+        <h2>Você aceita ficar comigo?</h2>
+        <button id="sim">Sim</button>
+        <button id="nao">Não</button>
+    </div>
+
+    <div id="response" style="display: none;">
+        <p id="message"></p>
+    </div>
+
+    <script>
+        document.getElementById("sim").addEventListener("click", function() {
+            document.getElementById("question").style.display = "none";
+            document.getElementById("response").style.display = "block";
+            document.getElementById("message").innerText = "Ok. Te pego Domingo à tarde.";
+        });
+
+        document.getElementById("nao").addEventListener("click", function() {
+            alert("Poxa, que pena! Vamos tentar de novo?");
+        });
+    </script>
+</body>
+</html>
